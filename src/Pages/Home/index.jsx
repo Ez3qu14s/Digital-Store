@@ -3,6 +3,7 @@ import Hero from './home-components/Hero';
 import EmDestaque from './home-components/EmDestaque';
 import EmAlta from "./home-components/EmAlta";
 import SelectProduto from "./home-components/SelectProduto";
+import Footer from '../../Components/Footer';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <EmDestaque />
       <SelectProduto />
       <EmAlta/>
+      <Footer />
 
     </div>
   );
