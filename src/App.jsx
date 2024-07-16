@@ -1,9 +1,7 @@
-function App() {
+import './index.css';
 
-  return (
-    <>
-    </>
-  )
+function App() {
+  return <></>;
 }
 
-export default App
+export default App;
