@@ -26,10 +26,11 @@ const produtosDestaque = [
 
 export default function EmDestaque() {
   return (
-    <section className="flex flex-col font-bold p-4">
+    <section className="flex flex-col font-bold">
       <h2 className="text-dark-gray-2 mb-4">Coleções em destaque</h2>
-      {produtosDestaque.map((produto) => (
-        <div key={produto.id} className="flex w-[338px] h-[212px] bg-[#D8E3F2] mb-4 rounded-[8px]">
+      <div className="sm:flex justify-center">
+        {produtosDestaque.map((produto) => (
+        <div key={produto.id} className="flex w-[338px] h-[212px] bg-[#D8E3F2] mb-4 rounded-[8px] sm: m-1.5">
           <div className="flex flex-col justify-around p-4">
             <span className="w-[90.55px] text-[14px] bg-[#E7FF86] text-dark-gray-2 rounded-[29px] text-center inline-block leading-[32px]">
               {produto.discount}
@@ -50,6 +51,7 @@ export default function EmDestaque() {
           </div>
         </div>
       ))}
+      </div>
     </section>
   );
 }
