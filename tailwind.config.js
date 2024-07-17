@@ -18,6 +18,9 @@ export default {
         'light-gray-2': '#CCCCCC',
         'light-gray-3': '#F5F5F5',
       },
+      fontFamily: {
+        inter: ['Inter', 'Sans-serif'],
+      },
     },
   },
   plugins: [],
