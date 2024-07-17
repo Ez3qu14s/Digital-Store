@@ -10,7 +10,7 @@ export default function SelectProduto() {
     return (
         <section className="bg-black text-dark-gray-2 font-bold m-8">
             <h2 className="text-center">Coleções em destaque</h2>
-            <div className="overflow-x-auto flex justify-between mt-4">
+            <div className="overflow-x-auto flex justify-between mt-4 sm:justify-center">
                 {produtos.map((produto, index) => (
                     <div key={index} className="text-center mr-3">
                         <button className="flex justify-center items-center w-[92.03px] h-[92.03px] rounded-[132.73px] bg-white">
