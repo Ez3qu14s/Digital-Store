@@ -1,59 +1,60 @@
-import { CiSearch } from 'react-icons/ci';
-import { IoCartOutline } from 'react-icons/io5';
+import { useState, useEffect } from 'react';
+import { IoCartOutline, IoMenu } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/logo.png';
+import { CiSearch } from 'react-icons/ci';
 
 export default function Header() {
+    const [showMenu, setShowMenu] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  return (
-    <header className="">
-      <div className="">
-        
-        <div className="">
-          <img className=""
-            src="" alt=""
-          />
-        </div>
-        <div className="">
-          <input className=""
-            type="text" placeholder="?"
-          />
-          <CiSearch />
-        </div>
-        <div className="">
-          <button className="">
-            Entrar
-          </button>
-          <IoCartOutline />
-        </div>
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
 
-        <div className="">
-          <nav className="">
-            <ul className="">
-              <li className="">
-                <Link className=""
-                  to="#">Home
-                </Link>
-              </li>
-              <li className="">
-                <Link className=""
-                  to="#">Produtos
-                </Link>
-              </li>
-              <li className="">
-                <Link className=""
-                  to="#">Categorias
-                </Link>
-              </li>
-              <li className="">
-                <Link className=""
-                  to="#">Meus produtos
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-          
-      </div>
-    </header>
-  )
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
+        <header className="bg-white shadow-md">
+            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12"> {/* Aumentei o px e py para telas maiores */}
+                {/* Ícone de menu (apenas em telas móveis) */}
+                {isMobile && (
+                    <IoMenu className="text-gray-600 cursor-pointer block lg:hidden" onClick={() => setShowMenu(!showMenu)} />
+                )}
+
+                {/* Logo e título centralizados */}
+                <div className="flex items-center space-x-2 md:space-x-4 flex-1 justify-center">
+                    <img className="h-16 w-16 md:h-20 md:w-20" src={Logo} alt="Logo" /> {/* Aumentei o tamanho do logo */}
+                    <h1 className="text-xl md:text-3xl font-bold text-pink-600">Digital Store</h1> {/* Aumentei o tamanho do texto */}
+                </div>
+
+                {/* Ícones de busca e carrinho */}
+                <div className="flex items-center space-x-4 md:space-x-6"> {/* Aumentei o espaço entre os ícones */}
+                    <CiSearch className="text-gray-600 cursor-pointer" />
+                    <button className="relative text-gray-600 hover:text-pink-600">
+                        <IoCartOutline className="h-8 w-8 md:h-10 md:w-10" /> {/* Aumentei o tamanho do ícone */}
+                        {/* Notificação no ícone do carrinho */}
+                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-2">2</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Opções de navegação (exibidas apenas em telas largas) */}
+            {!isMobile && (
+                <div className="bg-white border-t border-gray-200">
+                    <nav className="container mx-auto py-2 md:py-4 px-6 md:px-12 flex space-x-6"> {/* Aumentei o px e espaço entre os links */}
+                        <Link to="/" className="text-lg md:text-xl text-pink-600 hover:text-pink-700">Home</Link> {/* Aumentei o tamanho do texto */}
+                        <Link to="/produtos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Produtos</Link> {/* Aumentei o tamanho do texto */}
+                        <Link to="/categorias" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Categorias</Link> {/* Aumentei o tamanho do texto */}
+                        <Link to="/pedidos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Meus Pedidos</Link> {/* Aumentei o tamanho do texto */}
+                    </nav>
+                </div>
+            )}
+        </header>
+    );
 }
