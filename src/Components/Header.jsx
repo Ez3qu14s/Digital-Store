@@ -21,23 +21,22 @@ export default function Header() {
 
     return (
         <header className="bg-white shadow-md">
-            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12"> {/* Aumentei o px e py para telas maiores */}
-                {/* Ícone de menu (apenas em telas móveis) */}
+            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12"> 
                 {isMobile && (
                     <IoMenu className="text-gray-600 cursor-pointer block lg:hidden" onClick={() => setShowMenu(!showMenu)} />
                 )}
 
                 {/* Logo e título centralizados */}
                 <div className="flex items-center space-x-2 md:space-x-4 flex-1 justify-center">
-                    <img className="h-16 w-16 md:h-20 md:w-20" src={Logo} alt="Logo" /> {/* Aumentei o tamanho do logo */}
-                    <h1 className="text-xl md:text-3xl font-bold text-pink-600">Digital Store</h1> {/* Aumentei o tamanho do texto */}
+                    <img className="h-16 w-16 md:h-20 md:w-20" src={Logo} alt="Logo" />
+                    <h1 className="text-xl md:text-3xl font-bold text-pink-600">Digital Store</h1>
                 </div>
 
                 {/* Ícones de busca e carrinho */}
-                <div className="flex items-center space-x-4 md:space-x-6"> {/* Aumentei o espaço entre os ícones */}
+                <div className="flex items-center space-x-4 md:space-x-6">
                     <CiSearch className="text-gray-600 cursor-pointer" />
                     <button className="relative text-gray-600 hover:text-pink-600">
-                        <IoCartOutline className="h-8 w-8 md:h-10 md:w-10" /> {/* Aumentei o tamanho do ícone */}
+                        <IoCartOutline className="h-8 w-8 md:h-10 md:w-10" />
                         {/* Notificação no ícone do carrinho */}
                         <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-2">2</span>
                     </button>
