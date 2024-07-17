@@ -6,7 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className=" bg-black text-white p-6">
+        <footer className=" bg-dark-gray text-white p-6">
 
             <div className="6 md:flex md:justify-between gap-6">
                 
@@ -63,7 +63,7 @@ const Footer = () => {
 
             
                 <div className="w-full border-t-2 border-t-gray-500 mt-4 text-center">
-                    <p>&copy; 2022 Digital College</p>
+                    <p>&copy; 2024 Digital College</p>
                 </div>
             
 
