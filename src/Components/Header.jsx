@@ -24,7 +24,7 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-white shadow-md relative z-20">
+        <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-30">
             <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12">
                 {isMobile && (
                     <IoMenu className="text-gray-600 cursor-pointer block lg:hidden h-6 w-6 md:h-10 md:w-10" onClick={toggleMenu} />
@@ -52,19 +52,50 @@ export default function Header() {
             {/* Menu lateral */}
             {showMenu && (
                 <>
-                    <div className="fixed top-10px left-0 w-full h-screen bg-black opacity-50 z-10" onClick={toggleMenu} />
-                    <div className="absolute top-full left-0 right-0 bg-white shadow-md z-20">
-                        <div className="container mx-auto py-4 px-6 md:py-6 md:px-12">
-                            <nav className="flex flex-col space-y-4">
-                                <Link to="/" className="text-lg md:text-xl text-pink-600 hover:text-pink-700 block">Home</Link>
-                                <Link to="/produtos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Produtos</Link>
-                                <Link to="/categorias" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Categorias</Link>
-                                <Link to="/pedidos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Meus Pedidos</Link>
-                            </nav>
+                    <div className="fixed top-15 left-0 w-full h-screen bg-black opacity-50 z-20" onClick={toggleMenu} />
+                    <div className="fixed top-bottom-0 left-0 w-3/4 h-full bg-white shadow-md z-30">
+                        <div className="container mx-auto py-4 px-6 md:py-6 md:px-12 flex flex-col justify-between h-full">
+                            <div>
+                                <label className='font-bold text-gray-600 text-base'>Páginas</label>
+                                <div className="mt-4">
+                                    <div className='w-[45px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Home
+                                        </Link>
+                                        <hr className='border-b-3 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[70px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold  hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Produtos
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[80px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold  hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Categorias
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[110px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold  hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Meus pedidos
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-auto">
+                                <hr className="my-4" />
+                                <div className='flex flex-col items-center space-y-2'>
+                                    <button className="w-full py-2 bg-pink-600 text-white font-bold rounded">Entrar</button>
+                                    <Link to="/" className="block py-2 text-gray-600 hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">Cadastre-se</Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </>
             )}
+
         </header>
     );
 }
