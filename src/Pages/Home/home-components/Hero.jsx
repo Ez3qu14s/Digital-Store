@@ -11,7 +11,7 @@ function Hero() {
         type: 'loop',
         // autoplay: true,
       }}
-      className="md:px-[8rem] lg:px-[10rem]"
+      className="md:px-[8rem] lg:px-[10rem] pb-12 md:pb-0"
     >
       <SplideSlide className="mb-12 md:mb-0 relative">
         <div className="w-full flex flex-col-reverse text-center md:grid md:grid-cols-2 md:text-start md:items-center">
