@@ -19,40 +19,51 @@ export default function Header() {
         };
     }, []);
 
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
     return (
-        <header className="bg-white shadow-md">
-            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12"> 
+        <header className="bg-white shadow-md relative z-20">
+            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12">
                 {isMobile && (
-                    <IoMenu className="text-gray-600 cursor-pointer block lg:hidden" onClick={() => setShowMenu(!showMenu)} />
+                    <IoMenu className="text-gray-600 cursor-pointer block lg:hidden h-6 w-6 md:h-10 md:w-10" onClick={toggleMenu} />
                 )}
 
                 {/* Logo e título centralizados */}
                 <div className="flex items-center space-x-2 md:space-x-4 flex-1 justify-center">
-                    <img className="h-16 w-16 md:h-20 md:w-20" src={Logo} alt="Logo" />
-                    <h1 className="text-xl md:text-3xl font-bold text-pink-600">Digital Store</h1>
+                    <img className="w-7 md:h-10 md:w-10" src={Logo} alt="Logo" />
+                    <h1 className="text-custom font-bold text-xl text-pink-600">Digital Store</h1>
                 </div>
 
                 {/* Ícones de busca e carrinho */}
                 <div className="flex items-center space-x-4 md:space-x-6">
-                    <CiSearch className="text-gray-600 cursor-pointer" />
+                    <CiSearch className="text-gray-600 cursor-pointer h-6 w-6 md:h-10 md:w-10" />
                     <button className="relative text-gray-600 hover:text-pink-600">
-                        <IoCartOutline className="h-8 w-8 md:h-10 md:w-10" />
                         {/* Notificação no ícone do carrinho */}
-                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-2">2</span>
+                        <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center border-2 border-white font-bold">
+                            <span className="block">2</span>
+                        </div>
+                        <IoCartOutline className="h-6 w-6 md:h-10 md:w-10 text-pink-600" />
                     </button>
                 </div>
             </div>
 
-            {/* Opções de navegação (exibidas apenas em telas largas) */}
-            {!isMobile && (
-                <div className="bg-white border-t border-gray-200">
-                    <nav className="container mx-auto py-2 md:py-4 px-6 md:px-12 flex space-x-6"> {/* Aumentei o px e espaço entre os links */}
-                        <Link to="/" className="text-lg md:text-xl text-pink-600 hover:text-pink-700">Home</Link> {/* Aumentei o tamanho do texto */}
-                        <Link to="/produtos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Produtos</Link> {/* Aumentei o tamanho do texto */}
-                        <Link to="/categorias" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Categorias</Link> {/* Aumentei o tamanho do texto */}
-                        <Link to="/pedidos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600">Meus Pedidos</Link> {/* Aumentei o tamanho do texto */}
-                    </nav>
-                </div>
+            {/* Menu lateral */}
+            {showMenu && (
+                <>
+                    <div className="fixed top-10px left-0 w-full h-screen bg-black opacity-50 z-10" onClick={toggleMenu} />
+                    <div className="absolute top-full left-0 right-0 bg-white shadow-md z-20">
+                        <div className="container mx-auto py-4 px-6 md:py-6 md:px-12">
+                            <nav className="flex flex-col space-y-4">
+                                <Link to="/" className="text-lg md:text-xl text-pink-600 hover:text-pink-700 block">Home</Link>
+                                <Link to="/produtos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Produtos</Link>
+                                <Link to="/categorias" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Categorias</Link>
+                                <Link to="/pedidos" className="text-lg md:text-xl text-gray-600 hover:text-pink-600 block">Meus Pedidos</Link>
+                            </nav>
+                        </div>
+                    </div>
+                </>
             )}
         </header>
     );
