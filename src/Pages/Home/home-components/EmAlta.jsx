@@ -20,7 +20,7 @@ export default function EmAlta() {
                 </div>
                 <div className="flex items-center  gap-2">
                     <p className="font-medium text-primary text-sm sm:text-[18px]">Ver todos</p>
-                    <FaLongArrowAltRight className="text-primary" />
+                    <FaLongArrowAltRight className="text-primary" size={16}/>
                 </div>
             </div>
 
