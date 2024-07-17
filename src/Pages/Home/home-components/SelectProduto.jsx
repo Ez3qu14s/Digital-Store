@@ -2,7 +2,7 @@ export default function SelectProduto() {
     const produtos = [
         { nome: "Camisetas", icone: "/assets/Icons/Camisa.svg" },
         { nome: "Calças", icone: "/assets/Icons/Calca.svg" },
-        { nome: "Bonés", icone: "/assets/Icons/Calca.svg" },
+        { nome: "Bonés", icone: "../public/assets/hat.png" },
         { nome: "Headphones", icone: "/assets/Icons/Headphone.svg" },
         { nome: "Tênis", icone: "/assets/Icons/Tenis.svg" }
     ];
