@@ -16,17 +16,17 @@ function Hero() {
       <SplideSlide className="mb-12 md:mb-0 relative">
         <div className="w-full flex flex-col-reverse text-center md:grid md:grid-cols-2 md:text-start md:items-center">
           <div className="px-6">
-            <span className="text-[1.4rem] text-primary">
+            <span className="text-[14px] text-primary">
               Melhores ofertas personalizadas
             </span>
-            <h1 className="text-[4rem] leading-[5rem] font-bold text-dark-gray">
+            <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
               Queima de stoque Nike 🔥
             </h1>
-            <p className="text-[1.4rem] my-4 text-dark-gray-2">
+            <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[1.4rem] text-white font-medium md:w-[22rem]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
               Ver ofertas
             </button>
           </div>
@@ -37,17 +37,17 @@ function Hero() {
       <SplideSlide className="mb-12 md:mb-0 relative">
         <div className="w-full flex flex-col-reverse text-center md:grid md:grid-cols-2 md:text-start md:items-center">
           <div className="px-6">
-            <span className="text-[1.4rem] text-primary">
+            <span className="text-[14px] text-primary">
               Melhores ofertas personalizadas
             </span>
-            <h1 className="text-[4rem] leading-[5rem] font-bold text-dark-gray">
+            <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
               Queima de stoque Nike 🔥
             </h1>
-            <p className="text-[1.4rem] my-4 text-dark-gray-2">
+            <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[1.4rem] text-white font-medium md:w-[22rem]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
               Ver ofertas
             </button>
           </div>
@@ -58,17 +58,17 @@ function Hero() {
       <SplideSlide className="mb-12 md:mb-0 relative">
         <div className="w-full flex flex-col-reverse text-center md:grid md:grid-cols-2 md:text-start md:items-center">
           <div className="px-6">
-            <span className="text-[1.4rem] text-primary">
+            <span className="text-[14px] text-primary">
               Melhores ofertas personalizadas
             </span>
-            <h1 className="text-[4rem] leading-[5rem] font-bold text-dark-gray">
+            <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
               Queima de stoque Nike 🔥
             </h1>
-            <p className="text-[1.4rem] my-4 text-dark-gray-2">
+            <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[1.4rem] text-white font-medium md:w-[22rem]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
               Ver ofertas
             </button>
           </div>
@@ -79,17 +79,17 @@ function Hero() {
       <SplideSlide className="mb-12 md:mb-0 relative">
         <div className="w-full flex flex-col-reverse text-center md:grid md:grid-cols-2 md:text-start md:items-center">
           <div className="px-6">
-            <span className="text-[1.4rem] text-primary">
+            <span className="text-[14px] text-primary">
               Melhores ofertas personalizadas
             </span>
-            <h1 className="text-[4rem] leading-[5rem] font-bold text-dark-gray">
+            <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
               Queima de stoque Nike 🔥
             </h1>
-            <p className="text-[1.4rem] my-4 text-dark-gray-2">
+            <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[1.4rem] text-white font-medium md:w-[22rem]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
               Ver ofertas
             </button>
           </div>
