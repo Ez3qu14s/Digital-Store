@@ -2,8 +2,8 @@ import React from 'react';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home'
-import Products from './Pages/Products';
-import Product from './Pages/Product'
+import Produtos from './Pages/Products';
+import Produto from './Pages/Product'
 
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/produtos" element={<Products />} />
-          <Route path='/produto/:nome' element={<Product/>}/>
+          <Route path="/produtos" element={<Produtos />} />
+          <Route path='/produto/:nome' element={<Produto/>}/>
         </Routes>
       </BrowserRouter>
     </>
