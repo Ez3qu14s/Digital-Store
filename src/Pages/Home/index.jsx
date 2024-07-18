@@ -5,10 +5,12 @@ import EmAlta from './home-components/EmAlta';
 import SelectProduto from './home-components/SelectProduto';
 import Footer from '../../Components/Footer';
 import CallToAction from './home-components/CallToAction';
+import Header from '../../Components/Header';
 
 function Home() {
   return (
     <div>
+      <Header/>
       <Hero />
       <EmDestaque />
       <SelectProduto />
