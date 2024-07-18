@@ -20,13 +20,13 @@ function Hero() {
               Melhores ofertas personalizadas
             </span>
             <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
-              Queima de estoque Nike 🔥
+              Queima de <br className="hidden md:block" /> estoque Nike 🔥
             </h1>
             <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[200px] md:p-3 transition-colors hover:bg-tertiary duration-200">
               Ver ofertas
             </button>
           </div>
@@ -41,13 +41,13 @@ function Hero() {
               Melhores ofertas personalizadas
             </span>
             <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
-              Queima de stoque Nike 🔥
+              Queima de <br className="hidden md:block" /> stoque Nike 🔥
             </h1>
             <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[200px] md:p-3 transition-colors hover:bg-tertiary duration-200">
               Ver ofertas
             </button>
           </div>
@@ -62,13 +62,13 @@ function Hero() {
               Melhores ofertas personalizadas
             </span>
             <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
-              Queima de stoque Nike 🔥
+              Queima de <br className="hidden md:block" /> stoque Nike 🔥
             </h1>
             <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[200px] md:p-3 transition-colors hover:bg-tertiary duration-200">
               Ver ofertas
             </button>
           </div>
@@ -83,13 +83,13 @@ function Hero() {
               Melhores ofertas personalizadas
             </span>
             <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
-              Queima de stoque Nike 🔥
+              Queima de <br className="hidden md:block" /> stoque Nike 🔥
             </h1>
             <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
               laboris eiusmod irure consectetur.
             </p>
-            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[220px]">
+            <button className="w-full p-4 rounded-lg bg-primary text-[14px] text-white font-medium md:w-[200px] md:p-3 transition-colors hover:bg-tertiary duration-200">
               Ver ofertas
             </button>
           </div>

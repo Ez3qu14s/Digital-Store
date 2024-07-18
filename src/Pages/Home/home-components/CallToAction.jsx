@@ -24,7 +24,7 @@ const CallToAction = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip
           </p>
-          <button className="w-[200px] py-2 bg-primary my-3 rounded-md font-medium text-light-gray-3">
+          <button className="w-[200px] py-2 bg-primary my-3 rounded-md font-medium text-light-gray-3 transition-colors hover:bg-tertiary duration-200">
             Ver oferta
           </button>
         </section>
