@@ -58,10 +58,30 @@ export default function Header() {
                             <div>
                                 <label className='font-bold text-gray-600 text-base'>Páginas</label>
                                 <div className="mt-4">
-                                    <Link exact to="/" className="block py-2 text-gray-600 hover:text-pink-600 focus:text-pink-600" activeClassName="text-pink-600 border-b-2 border-pink-600">Home</Link>
-                                    <Link to="/produtos" className="block py-2 text-gray-600 hover:text-pink-600 focus:text-pink-600" activeClassName="text-pink-600 border-b-2 border-pink-600">Produtos</Link>
-                                    <Link to="/categorias" className="block py-2 text-gray-600 hover:text-pink-600 focus:text-pink-600" activeClassName="text-pink-600 border-b-2 border-pink-600">Categorias</Link>
-                                    <Link to="/pedidos" className="block py-2 text-gray-600 hover:text-pink-600 focus:text-pink-600" activeClassName="text-pink-600 border-b-2 border-pink-600">Meus Pedidos</Link>
+                                    <div className='w-[45px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Home
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[70px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Produtos
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[82px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Categorias
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
+                                    <div className='w-[108px]'>
+                                        <Link to="/" className="block py-2 text-gray-600 transition-colors duration-300 hover:font-bold hover:text-pink-600 hover:border-b-2 hover:border-pink-600 focus:text-pink-600 focus:border-b-2 focus:border-pink-600">
+                                            Meus pedidos
+                                        </Link>
+                                        <hr className='border-b-2 border-transparent hover:border-pink-600' />
+                                    </div>
                                 </div>
                             </div>
                             <div className="mt-auto">
