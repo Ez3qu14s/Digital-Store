@@ -13,14 +13,14 @@ const produtosDestaque = [
     discount: '30% OFF',
     title: 'Coleção Adidas',
     buttonText: 'Comprar',
-    imgSrc: 'public/assets/tenis-destaque.png', // Substitua pelo caminho correto da imagem
+    imgSrc: 'public/assets/tenis-destaque.png', 
   },
   {
     id: 3,
     discount: '30% OFF',
     title: 'Novo Beats Bass',
     buttonText: 'Comprar',
-    imgSrc: 'public/assets/fone-destaque.png', // Substitua pelo caminho correto da imagem
+    imgSrc: 'public/assets/fone-destaque.png', 
   },
 ];
 
