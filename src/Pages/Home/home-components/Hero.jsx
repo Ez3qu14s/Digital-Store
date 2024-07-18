@@ -20,7 +20,7 @@ function Hero() {
               Melhores ofertas personalizadas
             </span>
             <h1 className="text-[40px] leading-[50px] font-bold text-dark-gray">
-              Queima de stoque Nike 🔥
+              Queima de estoque Nike 🔥
             </h1>
             <p className="text-[14px] my-4 text-dark-gray-2">
               Consequat culpa exercitation mollit nisi excepteur do do tempor
