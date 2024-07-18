@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer';
 import CallToAction from './home-components/CallToAction';
 import Header from '../../Components/Header';
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <Header/>
@@ -20,3 +20,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
