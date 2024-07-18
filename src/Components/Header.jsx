@@ -5,9 +5,12 @@ import Logo from '../assets/logo.png';
 import { CiSearch } from 'react-icons/ci';
 
 export default function Header() {
+    // Estados para gerenciar o menu, a visualização em dispositivos móveis e o input de pesquisa
     const [showMenu, setShowMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [showSearchInput, setShowSearchInput] = useState(false);
 
+    // Atualiza o estado de isMobile ao redimensionar a janela
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -19,13 +22,20 @@ export default function Header() {
         };
     }, []);
 
+    // Alterna a visibilidade do menu lateral
     const toggleMenu = () => {
         setShowMenu(!showMenu);
+    };
+
+    // Alterna a visibilidade do input de pesquisa
+    const toggleSearchInput = () => {
+        setShowSearchInput(!showSearchInput);
     };
 
     return (
         <header className="bg-white shadow-md relative z-20">
             <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12">
+                {/* Ícone do menu para dispositivos móveis */}
                 {isMobile && (
                     <IoMenu className="text-gray-600 cursor-pointer block lg:hidden h-6 w-6 md:h-10 md:w-10" onClick={toggleMenu} />
                 )}
@@ -38,7 +48,11 @@ export default function Header() {
 
                 {/* Ícones de busca e carrinho */}
                 <div className="flex items-center space-x-4 md:space-x-6">
-                    <CiSearch className="text-gray-600 cursor-pointer h-6 w-6 md:h-10 md:w-10" />
+                    {/* Ícone de busca com estado para exibir ou ocultar o input */}
+                    <CiSearch
+                        className={`cursor-pointer h-6 w-6 md:h-10 md:w-10 ${showSearchInput ? 'text-pink-600' : 'text-gray-600'}`}
+                        onClick={toggleSearchInput}
+                    />
                     <button className="relative text-gray-600 hover:text-pink-600">
                         {/* Notificação no ícone do carrinho */}
                         <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center border-2 border-white font-bold">
@@ -49,12 +63,24 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Menu lateral */}
+            {/* Input de pesquisa, exibido quando showSearchInput está verdadeiro */}
+            {showSearchInput && (
+                <div className="container mx-auto px-6 md:px-12 py-4">
+                    <input
+                        type="text"
+                        className="w-full p-2 border-none bg-zinc-100 rounded-md focus:outline-none focus:border-pink-600"
+                        placeholder="Pesquisar produto..."
+                    />
+                </div>
+            )}
+
+            {/* Menu lateral, exibido quando showMenu está verdadeiro */}
             {showMenu && (
                 <>
                     <div className="fixed top-15 left-0 w-full h-screen bg-black opacity-50 z-20" onClick={toggleMenu} />
                     <div className="fixed top-bottom-0 left-0 w-3/4 h-full bg-white shadow-md z-30">
                         <div className="container mx-auto py-4 px-6 md:py-6 md:px-12 flex flex-col justify-between h-full">
+                            {/* Links do menu lateral */}
                             <div>
                                 <label className='font-bold text-gray-600 text-base'>Páginas</label>
                                 <div className="mt-4">
@@ -84,6 +110,7 @@ export default function Header() {
                                     </div>
                                 </div>
                             </div>
+                            {/* Botões de login e cadastro no final do menu */}
                             <div className="mt-auto">
                                 <hr className="my-4" />
                                 <div className='flex flex-col items-center space-y-2'>
@@ -95,8 +122,6 @@ export default function Header() {
                     </div>
                 </>
             )}
-
-
         </header>
     );
 }
