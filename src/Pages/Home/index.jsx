@@ -6,7 +6,7 @@ import SelectProduto from './home-components/SelectProduto';
 import Footer from '../../Components/Footer';
 import CallToAction from './home-components/CallToAction';
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <Hero />
@@ -18,3 +18,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

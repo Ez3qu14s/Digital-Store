@@ -1,9 +1,10 @@
 import React from 'react';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
 import Header from './Components/Header';
-import Products from './pages/Product';
+import Home from './Pages/Home/index';
+import Produto from './Pages/Product';
+import Produtos from './Pages/Products';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/produtos" element={<Products />} />
+          <Route path="/produtos" element={<Produtos />} />
+          <Route path="/produtos" element={<Produto />} />
         </Routes>
       </BrowserRouter>
     </>
