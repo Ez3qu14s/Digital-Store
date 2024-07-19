@@ -33,7 +33,7 @@ export default function Header({
     };
 
     return (
-        <header className={`bg-white shadow-md z-20 ${isMobile ? 'fixed top-0 left-0 w-full' : ''}`}>
+        <header className={`bg-white shadow-md z-20 ${isMobile ? 'fixed top-0 left-0 w-[100%]' : ''}`}>
             <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12 gap-6">
                 {isMobile && (
                     <IoMenu className="text-gray-600 cursor-pointer block lg:hidden h-6 w-6 md:h-10 md:w-10" onClick={toggleMenu} />
