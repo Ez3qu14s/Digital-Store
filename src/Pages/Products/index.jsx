@@ -12,6 +12,7 @@ export default function Produtos() {
   const [produtos, setProdutos] = useState([])
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const [showFilter, setShowFilter] = useState(false)
+  const [estado, setEstado] = useState ('')
 
   useEffect(() => {
     instance.get('/shoes')
@@ -60,14 +61,14 @@ export default function Produtos() {
         </div>
         <div className='sm:flex sm:px-16 rounded-[4px] sm:ml-4'>
           {!isMobile &&  (
-            <div className='flex flex-col sm:w-[280px] sm:h-[720px]  sm:bg-white sm:mt-2 sm:gap-5 sm:px-[10px]'>
+            <div className='flex flex-col sm:w-[240px] sm:h-[720px]  sm:bg-white sm:mt-2 sm:gap-5 sm:px-[10px]'>
        
             <div className='p-[30px] flex flex-col gap-3'>
             <div className='flex justify-between'>
               <p className='font-bold text-base text-dark-gray-2'>Filtrar por</p>
               
             </div>
-            <div className='w-[205px] bg-gray-500 border-[1px]'></div>
+            <div className='w-[170px] bg-gray-500 border-[1px]'></div>
             <div>
               <p className='font-bold text-base text-dark-gray-2'>Marka</p>
               <div className='flex gap-2 pt-2'>
@@ -128,11 +129,11 @@ export default function Produtos() {
             <div>
               <p className='font-bold text-base text-dark-gray-2'>Estado</p>
               <div className='flex gap-2 pt-2'>
-                <input className='accent-primary size-5' type="radio" name='novoUsado' value="opcao1" id='opcao1' />
+                <input className='accent-primary size-5' type="radio" name='estado' value={estado} id='opcao1' />
                 <label className='text-base' for="opcao1">Novo</label>
               </div>
               <div className='flex gap-2'>
-                <input className='accent-primary size-5' type="radio" name='usadoUsado' value="opcao2" id='opcao2' />
+                <input className='accent-primary size-5' type="radio" name='estado' value={estado} id='opcao2' />
                 <label className='text-base' for="opcao2">Usado</label>
               </div>
             </div>
