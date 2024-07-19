@@ -34,7 +34,7 @@ export default function Header({
 
     return (
         <header className={`bg-white shadow-md z-20 ${isMobile ? 'fixed top-0 left-0 w-full' : ''}`}>
-            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12">
+            <div className="container mx-auto flex items-center justify-between py-4 px-6 md:py-6 md:px-12 gap-6">
                 {isMobile && (
                     <IoMenu className="text-gray-600 cursor-pointer block lg:hidden h-6 w-6 md:h-10 md:w-10" onClick={toggleMenu} />
                 )}
@@ -44,7 +44,7 @@ export default function Header({
                     <h1 className={`text-custom font-bold ${isMobile ? 'text-xl' : 'text-2xl md:text-3xl'} text-pink-600`}>Digital Store</h1>
                 </div>
                 {!isMobile && (
-                    <div className="flex items-center flex-1 justify-center space-x-4">
+                    <div className="flex items-center flex-1 justify-between space-x-4">
                         <div className='relative flex items-center h-10'>
                             <input
                                 type="text"
