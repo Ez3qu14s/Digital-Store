@@ -62,10 +62,21 @@ export default function Carrinho() {
             </div>
           </div>
         </section>
-        <section className="p-4 bg-white">
+        <section className="p-4 bg-white mt-4">
+          <h1>Cupom de desconto</h1>
+          <input
+            type="text"
+            placeholder="Insira seu código"
+            className="p-3 bg-light-gray-3 w-full"
+          />
+          <button className="block w-full p-4 bg-light-gray-3 text-primary rounded-md uppercase font-medium mt-3">
+            ok
+          </button>
+        </section>
+        <section className="p-4 bg-white mt-4">
           <h1>Cupom de desconto</h1>
           <input type="text" placeholder="Insira seu código" />
-          <button className="">ok</button>
+          <button className="block w-full p-4 bg-light-gray-3">ok</button>
         </section>
       </div>
     </div>
