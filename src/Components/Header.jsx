@@ -5,7 +5,9 @@ import Logo from '../assets/logo.png';
 import { CiSearch } from 'react-icons/ci';
 import classNames from 'classnames';
 
-export default function Header() {
+export default function Header({
+    setShowFilter
+}) {
     const [showMenu, setShowMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [showSearchInput, setShowSearchInput] = useState(false);
@@ -23,6 +25,7 @@ export default function Header() {
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
+        setShowFilter(false)
     };
 
     const toggleSearchInput = () => {
@@ -152,7 +155,7 @@ export default function Header() {
             {showMenu && isMobile && (
                 <>
                     <div className="fixed top-15 left-0 w-full h-screen bg-black opacity-50 z-20" onClick={toggleMenu} />
-                    <div className="fixed top-[60px] left-0 w-3/4 h-[calc(100%-60px)] bg-white shadow-md z-30">
+                    <div className="fixed top-[60px] left-0 w-3/4 h-[calc(100%-60px)] bg-white shadow-md z-40">
                         <div className="container mx-auto py-4 px-6 md:py-6 md:px-12 flex flex-col justify-between h-full">
                             <div>
                                 <label className='font-bold text-gray-600 text-base'>Páginas</label>
