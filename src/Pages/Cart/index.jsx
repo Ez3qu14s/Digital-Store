@@ -62,6 +62,10 @@ export default function Carrinho() {
             </div>
           </div>
         </section>
+        <section className="p-4 bg-white">
+          <h1>Cupom de desconto</h1>
+          <input type="text" placeholder="Insira seu código" />
+        </section>
       </div>
     </div>
   );
