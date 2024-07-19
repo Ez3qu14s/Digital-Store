@@ -4,3 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+.custom-underline {
+    position: relative;
+}
+
+.custom-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.custom-underline:focus::after {
+    background-color: #ec4899;
+}
