@@ -18,7 +18,7 @@ const Produto = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    instance.get("/shoes-colors?").then((response) => {
+    instance.get("/shoes?").then((response) => {
       let prod = {};
       setProdutos(response.data);
       prod = response.data.find((prod) => prod.id === Number(id));
@@ -28,13 +28,7 @@ const Produto = () => {
       setBackgrounds(prod.backgrounds);
     });
   }, []);
-  useEffect(() => {
-    instance.get('/shoes?limit=2')
-        .then((response) => {
-            setProdutos(response.data)
-        })
-}, [])
-
+  
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
       <Header />
