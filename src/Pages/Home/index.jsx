@@ -9,7 +9,7 @@ import Header from '../../Components/Header';
 
 function Home() {
   return (
-    <div>
+    <div className='bg-light-gray-3'>
       <Header/>
       <Hero />
       <EmDestaque />
