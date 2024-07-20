@@ -42,7 +42,7 @@ export default function Produtos() {
 
   return (
     <div>
-
+      <Header/>
 
       <div className='flex flex-col w-[] justify-center bg-light-gray-3 pt-20 sm:pt-8 '>
 
