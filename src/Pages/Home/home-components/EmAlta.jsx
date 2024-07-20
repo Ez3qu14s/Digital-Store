@@ -14,7 +14,7 @@ export default function EmAlta() {
     }, [])
 
     return (
-        <div className=" flex flex-col bg-[#F8F8F8] ">
+        <div className=" flex flex-col sm:w-[1250px] ml-10 bg-[#F8F8F8] ">
             <div className="flex justify-between p-2">
                 <div>
                     <p className="text-dark-gray-2 text-sm sm:text-2xl font-bold">Produtos em alta</p>
