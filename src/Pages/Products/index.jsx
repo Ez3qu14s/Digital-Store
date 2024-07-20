@@ -43,7 +43,7 @@ export default function Produtos() {
   return (
     <div>
       <Header setShowFilter={setShowFilter} />
-      <div className='flex flex-col w-[] justify-center bg-pink-100 pt-20 sm:pt-8 '>
+      <div className='flex flex-col w-[] justify-center bg-light-gray-3 pt-20 sm:pt-8 '>
         <div className='w-[335px] h-[102px] rounded-lg m-4 sm:m-0  border-gray-800 flex flex-col-reverse items-center justify-center gap-5 sm:flex sm:flex-row sm:justify-between sm:w-full  sm:px-20'>
           <div className='flex justify-start w-full '>
             <p className='  font-bold text-dark-gray-2 text-base'>Resultados para “Tênis” - 389 produtos</p>
