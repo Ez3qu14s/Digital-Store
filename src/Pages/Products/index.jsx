@@ -10,12 +10,12 @@ import { IoIosClose } from "react-icons/io";
 export default function Produtos() {
 
   const [produtos, setProdutos] = useState([])
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640)
   const [showFilter, setShowFilter] = useState(false)
   const [estado, setEstado] = useState ('')
 
   useEffect(() => {
-    instance.get('/shoes')
+    instance.get('/shoes?limit=15')
       .then((response) => {
         setProdutos(response.data)
       })
@@ -23,7 +23,7 @@ export default function Produtos() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 640);
     };
 
     window.addEventListener('resize', handleResize);
