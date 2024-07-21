@@ -44,9 +44,9 @@ export default function Produtos() {
     <div>
       <Header />
 
-      <div className='flex flex-col w-[] justify-center bg-light-gray-3 pt-20 sm:pt-8 '>
+      <div className='flex flex-col w-full justify-center bg-light-gray-3 pt-20 sm:pt-8 '>
 
-        <div className='w-[335px] h-[102px] rounded-lg m-4 sm:m-0  border-gray-800 flex flex-col-reverse items-center justify-center gap-5 sm:flex sm:flex-row sm:justify-between sm:w-full  sm:px-20'>
+        <div className='w-[335px] h-[102px] rounded-lg m-4 sm:m-0  border-gray-800 flex flex-col-reverse items-center justify-center gap-5 sm:flex sm:flex-row sm:justify-between sm:w-[95%]  sm:px-20'>
           <div className='flex justify-start w-full '>
             <p className='  font-bold text-dark-gray-2 text-base'>Resultados para “Tênis” - 389 produtos</p>
           </div>
@@ -65,9 +65,9 @@ export default function Produtos() {
             </div>
           </div>
         </div>
-        <div className='sm:flex sm:px-16 rounded-[4px] sm:ml-4'>
+        <div className='sm:flex sm:w-[96%] sm:justify-between sm:gap-14  sm:px-20 rounded-[4px] sm:ml-4'>
           {!isMobile && (
-            <div className='flex flex-col sm:w-[240px] sm:h-[720px]  sm:bg-white sm:mt-2 sm:gap-5 sm:px-[10px]'>
+            <div className='flex flex-col sm:w-[100%] sm:h-[720px]  sm:bg-white sm:mt-2 sm:gap-5 '>
 
               <div className='p-[30px] flex flex-col gap-3'>
                 <div className='flex justify-between'>
@@ -76,14 +76,14 @@ export default function Produtos() {
                 </div>
                 <div className='w-[170px] bg-gray-500 border-[1px]'></div>
                 <div>
-                  <p className='font-bold text-base text-dark-gray-2'>Marka</p>
+                  <p className='font-bold text-base text-dark-gray-2'>Marca</p>
                   <div className='flex gap-2 pt-2'>
                     <input className='accent-primary size-5' type="checkbox" />
                     <label className='text-base'>Adidas</label>
                   </div>
                   <div className='flex gap-2'>
                     <input className='accent-primary size-5' type="checkbox" />
-                    <label className='text-base'>Calenciaga</label>
+                    <label className='text-base'>Balenciaga</label>
                   </div>
                   <div className='flex gap-2'>
                     <input className='accent-primary size-5' type="checkbox" />
