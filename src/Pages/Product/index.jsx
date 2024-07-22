@@ -83,7 +83,7 @@ const Produto = () => {
       </div>
       </div>
       <div className="sm:ml-5">
-      <h1 className="text-[24px] font-bold leading-[32px] mt-8 sm:mt-0 text-[32px]">
+      <h1 className="text-[24px] font-bold leading-[32px] mt-8 sm:mt-0 sm:text-[32px]">
         {prodSelect.nome}
       </h1>
       <p className="text-dark-gray text-[12px] leading-[18px] gap-3 mt-3">
@@ -136,7 +136,7 @@ const Produto = () => {
             return (
               <div
                 className={`w-[40px] h-[40px] rounded-full ${
-                  corSelect === cor ? "border border-[2px] border-primary" : ""
+                  corSelect === cor ? "border-[2px] border-primary" : ""
                 } flex items-center justify-center`}
                 onClick={() => setCorSelect(cor)}
               >
@@ -152,7 +152,7 @@ const Produto = () => {
         </div>
       </div>
       <div className=" flex justify-center sm:justify-start">
-      <button className=" w-[335px] h-[48px] text-bold text-[16px] bg-[#ffb31f] rounded-[8px] text-light-gray-3 hover:bg-[#cf8900] mt-12 mb-20 sm:h-[48px] w-[220px]">
+      <button className=" w-[335px] h-[48px] text-bold text-[16px] bg-[#ffb31f] rounded-[8px] text-light-gray-3 hover:bg-[#cf8900] mt-12 mb-20 sm:h-[48px] sm:w-[220px]">
         COMPRAR
       </button>
       </div>
