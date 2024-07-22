@@ -17,11 +17,16 @@ export default {
         'light-gray': '#8F8F8F',
         'light-gray-2': '#CCCCCC',
         'light-gray-3': '#F5F5F5',
+
+        'custom-top': '#B5B6F2',
+        'custom-bottom': '#EFEFFF',
       },
       fontFamily: {
         inter: ['Inter', 'Sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ('tailwindcss-gradients'),
+  ],
 };
