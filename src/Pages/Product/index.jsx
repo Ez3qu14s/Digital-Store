@@ -12,9 +12,9 @@ const Produto = () => {
   const [tamanhos, setTamanhos] = useState([]);
   const [tamanhoSelect, setTamanhoSelect] = useState(39);
   const [cores, setCores] = useState([]);
-  const [corSelect, setCorSelect] = useState("#6FEEFF");
+  const [corSelect, setCorSelect] = useState("");
   const [backgrounds, setBackgrounds] = useState([]);
-  const [img, setImg] = useState("#E2E3FF");
+  const [img, setImg] = useState("");
   const [produtosRelac, setProdutosRelac] = useState([]);
 
   const { id } = useParams();
@@ -28,6 +28,7 @@ const Produto = () => {
       setTamanhos(prod.tamanhos);
       setCores(prod.cores);
       setBackgrounds(prod.backgrounds);
+      setImg(prod.backgrounds[0])
     });
   }, []);
   useEffect(() => {
@@ -41,7 +42,7 @@ const Produto = () => {
   
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
-      <Header/>
+      <Header />
       <div className="m-5 sm:m-10">
       <div className="">
         <p className="text-[12px] sm:text-[14px] mb-8">
@@ -52,7 +53,7 @@ const Produto = () => {
       <div className="esquerda">
       <div className="flex justify-center">
       <div
-        className=" flex justify-center items-center	w-[335px] h-[272.98px]"
+        className=" flex justify-center items-center w-full aspect-square p-5"
         style={{
           background: img,
         }}
@@ -60,14 +61,13 @@ const Produto = () => {
         <img
           src={prodSelect.imagem_url}
           alt={prodSelect.nome}
-          className="w-[238.28px] h-[118.56px]"
+          className="w-full "
         />
       </div>
       </div>
       <div className="w-full flex justify-center gap-2 mt-2">
         {backgrounds.map((background) => (
           <div
-            
             className={`w-[60.17px] h-[57.51px] rounded flex items-center justify-center cursor-pointer ${
               background === img ? " border-[1px] border-primary" : ""
             }`}
@@ -77,7 +77,7 @@ const Produto = () => {
             }}
           >
             <img
-              className="w-[42.8px] h-[24.98px]"
+              className="w-full aspect-square p-1"
               src={prodSelect.imagem_url}
               alt={prodSelect.nome}
             />
