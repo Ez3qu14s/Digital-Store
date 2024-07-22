@@ -91,11 +91,11 @@ const Produto = () => {
       </p>
       <div className="flex items-center gap-3 mt-3">
         <img
-          src="../public\assets\Stars.png"
+          src="..\assets\Stars.png"
           alt="Estrelas avaliação"
           className="w-[92.08px] h-[14px]"
         />
-        <img src="../public\assets\Frame 9.png" alt="" className="w-[63px]" />
+        <img src="..\assets\Frame 9.png" alt="" className="w-[63px]" />
         <p>(90 avaliações)</p>
       </div>
       <div className="flex items-center gap-2 mt-5">
