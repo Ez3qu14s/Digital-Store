@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer";
 import instance from "../../api/instance";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Card from "../../Components/Card";
 
 const Produto = () => {
   const [produtos, setProdutos] = useState([]);
@@ -14,6 +15,7 @@ const Produto = () => {
   const [corSelect, setCorSelect] = useState("");
   const [backgrounds, setBackgrounds] = useState([]);
   const [img, setImg] = useState("");
+  const [produtosRelac, setProdutosRelac] = useState([]);
 
   const { id } = useParams();
 
@@ -29,16 +31,26 @@ const Produto = () => {
       setImg(prod.backgrounds[0])
     });
   }, []);
+  useEffect(() => {
+    instance.get("/shoes?limit=5").then((response) => {
+    setProdutosRelac(response.data.filter((produto) => produto.id !== prodSelect.id))
+    });
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
       <Header />
-      <div className="m-5">
-      <div className="mt-16">
-        <p className="text-[12px]">
+      <div className="m-5 sm:m-10">
+      <div className="">
+        <p className="text-[12px] sm:text-[14px] mb-8">
           <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} / {prodSelect.nome}
         </p>
       </div>
+      <div className="sm:flex">
+      <div className="esquerda">
       <div className="flex justify-center">
       <div
         className=" flex justify-center items-center w-full aspect-square p-5"
@@ -72,28 +84,30 @@ const Produto = () => {
           </div>
         ))}
       </div>
-      <h1 className="text-[24px] font-bold leading-[32px]">
+      </div>
+      <div className="sm:ml-5">
+      <h1 className="text-[24px] font-bold leading-[32px] mt-8 sm:mt-0 sm:text-[32px]">
         {prodSelect.nome}
       </h1>
-      <p className="text-dark-gray text-[12px] leading-[18px] gap-3">
+      <p className="text-dark-gray text-[12px] leading-[18px] gap-3 mt-3">
       {prodSelect.modelo} | {prodSelect.marca} | REF:{prodSelect.referencia}
       </p>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 mt-3">
         <img
-          src="../public\assets\Stars.png"
+          src="..\assets\Stars.png"
           alt="Estrelas avaliação"
           className="w-[92.08px] h-[14px]"
         />
-        <img src="../public\assets\Frame 9.png" alt="" className="w-[63px]" />
+        <img src="..\assets\Frame 9.png" alt="" className="w-[63px]" />
         <p>(90 avaliações)</p>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 mt-5">
         <p className="text-[32px]">R$:{prodSelect.preco_desconto},00</p>
         <p className="text-light-gray-2 line-through	text-[16px]">
           R$ {prodSelect.preco_original},00
         </p>
       </div>
-      <div className="descricao">
+      <div className="mt-5">
         <h2 className="text-light-gray font-bold">Descrição do produto</h2>
         <p>
           Um brinde aos novos começos entre você e as calçadas. Amarre os
@@ -102,7 +116,7 @@ const Produto = () => {
         </p>
       </div>
       <div className="tamanho">
-        <h2 className="font-bold text-light-gray">Tamanho</h2>
+        <h2 className="font-bold text-light-gray mt-5">Tamanho</h2>
         <div className="w-full flex gap-3">
           {tamanhos.map((tam) => (
             <div
@@ -119,7 +133,7 @@ const Produto = () => {
         </div>
       </div>
       <div className="">
-        <h2 className="font-bold text-light-gray">Cor</h2>
+        <h2 className="font-bold text-light-gray mt-5">Cor</h2>
         <div className="flex gap-3">
           {cores.map((cor) => {
             return (
@@ -140,10 +154,17 @@ const Produto = () => {
           })}
         </div>
       </div>
-      <div className=" flex justify-center">
-      <button className=" w-[335px] h-[48px] text-bold text-[16px] bg-[#ffb31f] rounded-[8px] text-light-gray-3 hover:bg-[#cf8900]">
+      <div className=" flex justify-center sm:justify-start">
+      <button className=" w-[335px] h-[48px] text-bold text-[16px] bg-[#ffb31f] rounded-[8px] text-light-gray-3 hover:bg-[#cf8900] mt-12 mb-20 sm:h-[48px] sm:w-[220px]">
         COMPRAR
       </button>
+      </div>
+      </div>
+      </div>
+      <div className="flex overflow-x-auto gap-2 p-2 mb-20 sm:gap-3 sm:justify-center">
+      {produtosRelac.map((produto) => (
+              <Card produto={produto} />
+            ))}
       </div>
       </div>
       <Footer />
