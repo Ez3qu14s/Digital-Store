@@ -7,7 +7,6 @@ import Produto from './Pages/Product'
 
 function App() {
   return (
-    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -15,7 +14,6 @@ function App() {
           <Route path='/produto/:id' element={<Produto />} />
         </Routes>
       </BrowserRouter>
-    </>
   );
 }
 
