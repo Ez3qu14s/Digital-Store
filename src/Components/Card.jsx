@@ -23,10 +23,10 @@ export default function Card({ produto }) {
           </h1>
           <div className="flex gap-3">
             <p className="text-light-gray font-normal text-normal line-through sm:text-2xl">
-              R${produto.preco_original}
+              R${produto.preco_original},00
             </p>
             <p className="text-dark-gray text-normal font-bold sm:text-2xl">
-              R${produto.preco_desconto}
+              R${produto.preco_desconto},00
             </p>
           </div>
         </div>
