@@ -35,6 +35,9 @@ const Produto = () => {
     setProdutosRelac(response.data.filter((produto) => produto.id !== prodSelect.id))
     });
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
