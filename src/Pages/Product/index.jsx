@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
-import instance from "../../api/instance";
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import Card from "../../Components/Card";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import React from 'react';
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import instance from '../../api/instance';
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import Card from '../../Components/Card';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Produto = () => {
   const [produtos, setProdutos] = useState([]);
@@ -13,15 +13,15 @@ const Produto = () => {
   const [tamanhos, setTamanhos] = useState([]);
   const [tamanhoSelect, setTamanhoSelect] = useState(39);
   const [cores, setCores] = useState([]);
-  const [corSelect, setCorSelect] = useState("");
+  const [corSelect, setCorSelect] = useState('');
   const [backgrounds, setBackgrounds] = useState([]);
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState('');
   const [produtosRelac, setProdutosRelac] = useState([]);
 
   const { id } = useParams();
 
   useEffect(() => {
-    instance.get("/shoes?").then((response) => {
+    instance.get('/shoes?').then((response) => {
       let prod = {};
       setProdutos(response.data);
       prod = response.data.find((prod) => prod.id === Number(id));
@@ -31,21 +31,21 @@ const Produto = () => {
       setBackgrounds(prod.backgrounds);
       setImg(prod.backgrounds[0]);
     });
-  }, [id]); 
+  }, [id]);
 
   useEffect(() => {
     if (prodSelect.id) {
-      instance.get("/shoes?limit=5").then((response) => {
+      instance.get('/shoes?limit=5').then((response) => {
         setProdutosRelac(
-          response.data.filter((produto) => produto.id !== prodSelect.id)
+          response.data.filter((produto) => produto.id !== prodSelect.id),
         );
       });
     }
-  }, [prodSelect]); 
+  }, [prodSelect]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]); 
+  }, [id]);
 
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
@@ -53,7 +53,7 @@ const Produto = () => {
       <div className="m-5">
         <div className="pt-16 sm:pt-0 sm:px-[130px]">
           <p className="text-[12px] mb-3 leading-5 sm:text-[14px] sm:mb-8">
-            <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} /{" "}
+            <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} /{' '}
             {prodSelect.nome}
           </p>
         </div>
@@ -78,7 +78,7 @@ const Produto = () => {
                 <div
                   key={background}
                   className={`w-[60.17px] h-[57.51px] rounded flex items-center justify-center cursor-pointer ${
-                    background === img ? " border-[1px] border-primary" : ""
+                    background === img ? ' border-[1px] border-primary' : ''
                   }`}
                   onClick={(e) => setImg(background)}
                   style={{
@@ -135,7 +135,7 @@ const Produto = () => {
                     key={tam}
                     onClick={() => setTamanhoSelect(tam)}
                     style={{
-                      background: `${tamanhoSelect === tam ? "#C92071" : ""}`,
+                      background: `${tamanhoSelect === tam ? '#C92071' : ''}`,
                     }}
                     className={`w-[40px] h-[40px] bg-white flex items-center justify-center cursor-pointer rounded border-light-gray-2`}
                   >
@@ -152,7 +152,7 @@ const Produto = () => {
                     <div
                       key={cor}
                       className={`w-[40px] h-[40px] rounded-full ${
-                        corSelect === cor ? "border-[2px] border-primary" : ""
+                        corSelect === cor ? 'border-[2px] border-primary' : ''
                       } flex items-center justify-center`}
                       onClick={() => setCorSelect(cor)}
                     >
