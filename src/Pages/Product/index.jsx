@@ -28,32 +28,39 @@ const Produto = () => {
       setTamanhos(prod.tamanhos);
       setCores(prod.cores);
       setBackgrounds(prod.backgrounds);
-      setImg(prod.backgrounds[0])
+      setImg(prod.backgrounds[0]);
     });
-  }, []);
+  }, [id]); 
+
   useEffect(() => {
+    if (prodSelect.id) {
     instance.get("/shoes?limit=5").then((response) => {
-    setProdutosRelac(response.data.filter((produto) => produto.id !== prodSelect.id))
+        setProdutosRelac(
+          response.data.filter((produto) => produto.id !== prodSelect.id)
+        );
     });
-  }, []);
+    }
+  }, [prodSelect]); 
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
   
   return (
     <div className="text-dark-gray-2 bg-light-gray-3">
       <Header />
       <div className="m-5 sm:m-10">
-      <div className="">
-        <p className="text-[12px] sm:text-[14px] mb-8">
-          <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} / {prodSelect.nome}
+        <div className="pt-16 sm:pt-0">
+          <p className="text-[12px] mb-3 sm:text-[14px] sm:mb-8">
+            <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} /{" "}
+            {prodSelect.nome}
         </p>
       </div>
-      <div className="sm:flex">
-      <div className="esquerda">
+        <div className="sm:flex sm:w-full">
+          <div className="sm:w-4/5">
       <div className="flex justify-center">
       <div
-        className=" flex justify-center items-center w-full aspect-square p-5"
+                className=" flex justify-center items-center w-full aspect-square p-5 sm:w-[700.73px] sm:h-[571px]"
         style={{
           background: img,
         }}
@@ -61,14 +68,15 @@ const Produto = () => {
         <img
           src={prodSelect.imagem_url}
           alt={prodSelect.nome}
-          className="w-full "
+                  className="w-full sm:w-3/4 "
         />
       </div>
       </div>
       <div className="w-full flex justify-center gap-2 mt-2">
         {backgrounds.map((background) => (
           <div
-            className={`w-[60.17px] h-[57.51px] rounded flex items-center justify-center cursor-pointer ${
+                  key={background}
+                  className={`w-[60.17px] h-[57.51px] rounded flex items-center justify-center cursor-pointer sm:w-[117.81px] sm:h-[96px] ${
               background === img ? " border-[1px] border-primary" : ""
             }`}
             onClick={(e) => setImg(background)}
@@ -77,7 +85,7 @@ const Produto = () => {
             }}
           >
             <img
-              className="w-full aspect-square p-1"
+                    className="w-full aspect-square p-1 sm:w-3/4"
               src={prodSelect.imagem_url}
               alt={prodSelect.nome}
             />
@@ -85,12 +93,13 @@ const Produto = () => {
         ))}
       </div>
       </div>
-      <div className="sm:ml-5">
+          <div className="sm:w-2/5">
       <h1 className="text-[24px] font-bold leading-[32px] mt-8 sm:mt-0 sm:text-[32px]">
         {prodSelect.nome}
       </h1>
       <p className="text-dark-gray text-[12px] leading-[18px] gap-3 mt-3">
-      {prodSelect.modelo} | {prodSelect.marca} | REF:{prodSelect.referencia}
+              {prodSelect.modelo} | {prodSelect.marca} | REF:
+              {prodSelect.referencia}
       </p>
       <div className="flex items-center gap-3 mt-3">
         <img
@@ -108,11 +117,13 @@ const Produto = () => {
         </p>
       </div>
       <div className="mt-5">
-        <h2 className="text-light-gray font-bold">Descrição do produto</h2>
+              <h2 className="text-light-gray font-bold">
+                Descrição do produto
+              </h2>
         <p>
           Um brinde aos novos começos entre você e as calçadas. Amarre os
-          cadarços 100% reciclados e defina o ritmo ao começar sua corrida com a
-          sensação de maciez do Nike Revolution 6 Next Nature.
+                cadarços e defina o ritmo ao começar sua corrida com a sensação
+                de maciez do {prodSelect.nome}
         </p>
       </div>
       <div className="tamanho">
