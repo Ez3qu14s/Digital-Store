@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Tenis from '/assets/White-tenis-hero.png';
+import Tenis from '../../../../public/assets/Tenis.png';
 import Ornament from '/assets/Ornament.svg';
 
 import '@splidejs/react-splide/css';

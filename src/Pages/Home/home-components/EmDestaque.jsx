@@ -1,7 +1,7 @@
 import React from 'react';
-import BlusaDestaque from '/assets/blusa-destaque.png';
-import ColecaoAdidas from '/assets/tenis-destaque.png';
-import NovoBeatBass from '/assets/fone-destaque.png';
+import BlusaDestaque from '../../../../public/assets/blusa-destaque.png';
+import ColecaoAdidas from '../../../../public/assets/tenis-destaque.png';
+import NovoBeatBass from '../../../../public/assets/fone-destaque.png';
 
 const produtosDestaque = [
   {
