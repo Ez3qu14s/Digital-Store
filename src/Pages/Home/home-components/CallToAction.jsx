@@ -1,5 +1,5 @@
 import React from 'react';
-import TenisCallToAction from '/public/assets/tenisCallToAction.png';
+import TenisCallToAction from '/assets/tenisCallToAction.png';
 
 const CallToAction = () => {
   return (

@@ -1,4 +1,7 @@
 import React from 'react';
+import BlusaDestaque from '/assets/blusa-destaque.png';
+import ColecaoAdidas from '/assets/tenis-destaque.png';
+import NovoBeatBass from '/assets/fone-destaque.png';
 
 const produtosDestaque = [
   {
@@ -6,21 +9,21 @@ const produtosDestaque = [
     discount: '30% OFF',
     title: 'Novo drop Supreme',
     buttonText: 'Comprar',
-    imgSrc: '/public/assets/blusa-destaque.png',
+    imgSrc: BlusaDestaque,
   },
   {
     id: 2,
     discount: '30% OFF',
     title: 'Coleção Adidas',
     buttonText: 'Comprar',
-    imgSrc: '/public/assets/tenis-destaque.png',
+    imgSrc: ColecaoAdidas,
   },
   {
     id: 3,
     discount: '30% OFF',
     title: 'Novo Beats Bass',
     buttonText: 'Comprar',
-    imgSrc: '/public/assets/fone-destaque.png',
+    imgSrc: NovoBeatBass,
   },
 ];
 
