@@ -1,9 +1,7 @@
 <h1  align="center"> Digital store </h1>
 
 <p  align="center">
-
 Digital Store: Plataforma de compras online desenvolvida no curso Geração Tech.
-
 </p>
 
 <p  align="center">
