@@ -7,21 +7,14 @@ Digital Store: Plataforma de compras online desenvolvida no curso Geração Tech
 </p>
 
 <p  align="center">
-
 <a  href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-
 <a  href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-
 <a  href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-
 <a  href="#participantes">Participantes</a>
-
 </p>
 
 <p  align="center">
-
 <img  alt="Projeto"  src="./public/assets/capa-do-projeto.png">
-
 </p>
 
 <br>
