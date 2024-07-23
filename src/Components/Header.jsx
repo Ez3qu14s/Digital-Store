@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoCartOutline, IoMenu } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import Logo from '../../public/assets/logo.png';
 import { CiSearch } from 'react-icons/ci';
 import classNames from 'classnames';
 
@@ -22,7 +22,7 @@ export default function Header() {
                             onClick={() => setMostrarMenu(!mostrarMenu)}
                         />
                     </div>
-
+                    
                     <NavLink to="/" className="flex items-center gap-2 md:flex-none mx-auto md:mx-0">
                         <img src={Logo} alt="Logo" className='w-6 md:w-8' />
                         <h1 className='text-primary font-bold text-[18px] md:text-[24px]'>Digital Store</h1>
@@ -144,7 +144,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <NavBar />
+                <NavBar />
         </>
     )
 }
