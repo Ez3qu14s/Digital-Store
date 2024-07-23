@@ -9,7 +9,7 @@ function Hero() {
     <Splide
       options={{
         type: 'loop',
-        // autoplay: true,
+        autoplay: true,
       }}
       className="md:px-[8rem] lg:px-[10rem] pb-12 md:pb-0"
     >
