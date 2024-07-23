@@ -40,8 +40,8 @@ export default function Login() {
                             <div className="text-center mb-4 lg:flex lg:items-center lg:justify-start lg:space-x-4">
                                 <p className="text-sm mb-4 lg:mb-0 lg:mr-4">Ou faça login com</p>
                                 <div className="flex justify-center lg:justify-start space-x-4">
-                                    <img src={Gmail} alt="gmail" className='w-6 h-6' />
-                                    <img src={Facebook} alt="facebook" className='w-6 h-6' />
+                                    <button><img src={Gmail} alt="gmail" className='w-6 h-6' /></button>
+                                    <button><img src={Facebook} alt="facebook" className='w-6 h-6' /></button>
                                 </div>
                             </div>
                         </div>
