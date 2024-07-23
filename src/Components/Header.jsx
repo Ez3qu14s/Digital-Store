@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoCartOutline, IoMenu } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import Logo from '../../public/assets/logo.png';
 import { CiSearch } from 'react-icons/ci';
 import classNames from 'classnames';
 
@@ -21,11 +21,12 @@ export default function Header() {
                         <IoMenu className='text-[24px] md:hidden'
                             onClick={() => setMostrarMenu(!mostrarMenu)}
                         />
-                        <NavLink to="/" className="flex items-center gap-2">
-                            <img src={Logo} alt="Logo" className='w-6 md:w-8' />
-                            <h1 className='text-primary font-bold text-[18px] md:text-[24px]'>Digital Store</h1>
-                        </NavLink>
                     </div>
+                    
+                    <NavLink to="/" className="flex items-center gap-2 md:flex-none mx-auto md:mx-0">
+                        <img src={Logo} alt="Logo" className='w-6 md:w-8' />
+                        <h1 className='text-primary font-bold text-[18px] md:text-[24px]'>Digital Store</h1>
+                    </NavLink>
 
                     {/* Barra de Pesquisa Centralizada */}
                     <div className="hidden md:flex flex-1 justify-center items-center">
@@ -44,7 +45,12 @@ export default function Header() {
                         >
                             <CiSearch className='text-[24px]' />
                         </button>
-                        <IoCartOutline className='text-[24px] text-primary' />
+                        <button className="relative">
+                            <div className="absolute top-[-4px] right-[-4px] flex items-center justify-center bg-primary text-white rounded-full w-4 h-4 text-xs font-bold">
+                                2
+                            </div>
+                            <IoCartOutline className='text-[24px] text-primary' />
+                        </button>
                     </div>
 
                     {/* Menu Completo - Desktop */}
@@ -54,8 +60,8 @@ export default function Header() {
                             <button className='w-full text-white bg-primary rounded-md p-2 px-8 font-bold'>Entrar</button>
                         </div>
                         <button className="relative">
-                            <div className="absolute top-[-8px] right-[-4px]">
-                                <span className="font-bold text-white bg-primary w-[6px] h-[6px] rounded-full p-[2px] px-[6px]">2</span>
+                            <div className="absolute top-[-4px] right-[-4px] flex items-center justify-center bg-primary text-white rounded-full w-4 h-4 text-xs font-bold">
+                                2
                             </div>
                             <IoCartOutline className="text-primary text-[35px]" />
                         </button>

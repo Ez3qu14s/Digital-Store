@@ -14,7 +14,7 @@ export default function EmAlta() {
     }, [])
 
     return (
-        <div className="  w-fullbg-[#F8F8F8] px-4 md:px-20 lg:px-32">
+        <div className="  w-full px-4 md:px-20 lg:px-32">
             <div className="flex justify-between ">
                 <p className="text-dark-gray-2 text-sm sm:text-2xl font-bold">Produtos em alta</p>
                 <Link to={`/produtos`}>

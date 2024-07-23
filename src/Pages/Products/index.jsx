@@ -41,10 +41,10 @@ export default function Produtos() {
   }
 
   return (
-    <div>
+    <div className='bg-light-gray-3'>
       <Header />
 
-      <div className='flex flex-col w-full justify-center bg-light-gray-3 pt-20 sm:pt-8 '>
+      <div className='flex flex-col w-full justify-center bg-light-gray-3 pt-20 sm:pt-8 sm:mb-12'>
 
         <div className='w-[335px] h-[102px] rounded-lg m-4 sm:m-0  border-gray-800 flex flex-col-reverse items-center justify-center gap-5 sm:flex sm:flex-row sm:justify-between sm:w-[95%]  sm:px-20'>
           <div className='flex justify-start w-full '>
