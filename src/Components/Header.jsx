@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoCartOutline, IoMenu } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../public/assets/logo.svg';
+import Logo from '../../public/assets/logo.png';
 import { CiSearch } from 'react-icons/ci';
 import classNames from 'classnames';
 

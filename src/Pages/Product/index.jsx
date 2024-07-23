@@ -34,13 +34,11 @@ const Produto = () => {
   }, [id]);
 
   useEffect(() => {
-    if (prodSelect.id) {
-      instance.get('/shoes?limit=5').then((response) => {
-        setProdutosRelac(
-          response.data.filter((produto) => produto.id !== prodSelect.id),
-        );
-      });
-    }
+    instance.get('/shoes?limit=5').then((response) => {
+      setProdutosRelac(
+        response.data.filter((produto) => produto.id !== prodSelect.id),
+      );
+    });
   }, [prodSelect]);
 
   useEffect(() => {
