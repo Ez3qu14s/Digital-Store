@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Tenis from '/assets/White-tenis-hero.png';
+import Tenis from '../../../../public/assets/Tenis.png';
 import Ornament from '/assets/Ornament.svg';
 
 import '@splidejs/react-splide/css';
@@ -9,7 +9,7 @@ function Hero() {
     <Splide
       options={{
         type: 'loop',
-        // autoplay: true,
+        autoplay: true,
       }}
       className="md:px-[8rem] lg:px-[10rem] pb-12 md:pb-0"
     >
