@@ -21,9 +21,14 @@ export default function Header() {
                         <IoMenu className='text-[24px] md:hidden'
                             onClick={() => setMostrarMenu(!mostrarMenu)}
                         />
+                        <div className="flex items-center gap-2">
+                            <img src={Logo} alt="Logo" className='w-6 md:w-8' />
+                            <h1 className='text-primary font-bold text-[18px] md:text-[24px]'> Digital Store</h1>
+                        </div>
+
                     </div>
                     
-                    <NavLink to="/" className="flex items-center gap-2 md:flex-none mx-auto md:mx-0">
+                    <NavLink to="/" className="flex itens-center gap-2 md:flex-none mx-auto md:mx-0">
                         <img src={Logo} alt="Logo" className='w-6 md:w-8' />
                         <h1 className='text-primary font-bold text-[18px] md:text-[24px]'>Digital Store</h1>
                     </NavLink>
@@ -56,8 +61,8 @@ export default function Header() {
                     {/* Menu Completo - Desktop */}
                     <div className="hidden md:flex items-center gap-5 justify-between">
                         <div className='mr-12 flex justify-between gap-12 items-center'>
-                            <NavLink to='/cadastre-se' className="text-dark-gray-2 text-nowrap underline">Cadastre-se</NavLink>
-                            <button className='w-full text-white bg-primary rounded-md p-2 px-8 font-bold'>Entrar</button>
+                            <NavLink to='/cadastro' className="text-dark-gray-2 text-nowrap underline">Cadastre-se</NavLink>
+                            <button className='w-full text-white bg-primary rounded-md p-2 px-8 font-bold'><NavLink to='/login'>Entrar</NavLink></button>
                         </div>
                         <button className="relative">
                             <div className="absolute top-[-4px] right-[-4px] flex items-center justify-center bg-primary text-white rounded-full w-4 h-4 text-xs font-bold">
