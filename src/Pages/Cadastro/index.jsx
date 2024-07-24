@@ -10,15 +10,15 @@ export default function Cadastro() {
     return (
         <div>
             <header className="flex justify-center lg:justify-start items-center p-2 bg-white shadow-md">
-                <div className="flex items-center">
-                    <img src={Logo} alt="Digital Store Logo" className="h-5 mr-2" />
-                    <span className="text-xl font-bold text-pink-500">Digital Store</span>
-                </div>
+                <NavLink to="/" className="flex items-center gap-2">
+                    <img src={Logo} alt="Logo" className='w-6 md:w-8' />
+                    <h1 className='text-primary font-bold text-[18px] md:text-[24px]'> Digital Store</h1>
+                </NavLink>
             </header>
             <main className="bg-gradient-to-b from-custom-top to-custom-bottom w-full min-h-screen flex flex-col lg:-mb-[120px]">
                 <div className="flex-1 flex justify-center items-center p-6 lg:-mt-[100px] ">
                     <div className="bg-white w-full max-w-[500px] p-6 flex flex-col justify-center items-center rounded-md shadow-md mx-auto">
-                        <div className="text-center mb-6">
+                        <div className="flex flex-col justify-start mb-6 w-full">
                             <h1 className="text-2xl text-start font-bold">Crie sua conta</h1>
                             <p className="text-sm text-start">Possui uma conta? Entre <a href="#" className="text-black underline">aqui</a>.</p>
                         </div>

@@ -23,7 +23,7 @@ export default function Header() {
                         />
                         <NavLink to="/" className="flex items-center gap-2">
                             <img src={Logo} alt="Logo" className='w-6 md:w-8' />
-                            <h1 className='text-primary font-bold text-[18px] md:text-[24px]'>Digital Store</h1>
+                            <h1 className='text-primary font-bold text-[18px] md:text-[24px]'> Digital Store</h1>
                         </NavLink>
                     </div>
 
@@ -50,8 +50,8 @@ export default function Header() {
                     {/* Menu Completo - Desktop */}
                     <div className="hidden md:flex items-center gap-5 justify-between">
                         <div className='mr-12 flex justify-between gap-12 items-center'>
-                            <NavLink to='/cadastre-se' className="text-dark-gray-2 text-nowrap underline">Cadastre-se</NavLink>
-                            <button className='w-full text-white bg-primary rounded-md p-2 px-8 font-bold'>Entrar</button>
+                            <NavLink to='/cadastro' className="text-dark-gray-2 text-nowrap underline">Cadastre-se</NavLink>
+                            <button className='w-full text-white bg-primary rounded-md p-2 px-8 font-bold'><NavLink to='/login'>Entrar</NavLink></button>
                         </div>
                         <button className="relative">
                             <div className="absolute top-[-8px] right-[-4px]">
