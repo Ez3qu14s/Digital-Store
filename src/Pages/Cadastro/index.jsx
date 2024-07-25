@@ -5,11 +5,12 @@ import Logo from '../../../public/assets/logo.png';
 import Gmail from '../../../public/assets/Icons/gmail.png';
 import Facebook from '../../../public/assets/Icons/facebook.png';
 import Sapatos from '../../../public/assets/Icons/sapatos.png';
+import { Link } from 'react-router-dom';
 
 export default function Cadastro() {
   return (
     <div>
-      <header className="flex justify-center lg:justify-start items-center p-2 bg-white shadow-md">
+      <header className="flex justify-center lg:justify-start items-center p-2 gap-2 lg:pl-24 bg-white shadow-md">
         <img src={Logo} alt="Logo" className="w-6 md:w-8" />
         <h1 className="text-primary font-bold text-[18px] md:text-[24px]">
           {' '}
@@ -23,9 +24,9 @@ export default function Cadastro() {
               <h1 className="text-2xl text-start font-bold">Crie sua conta</h1>
               <p className="text-sm text-start">
                 Possui uma conta? Entre{' '}
-                <a href="#" className="text-black underline">
-                  aqui
-                </a>
+                <Link to={'/login'} className='className="text-black underline'>
+                aqui
+                </Link>
                 .
               </p>
             </div>
