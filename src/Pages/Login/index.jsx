@@ -1,16 +1,17 @@
 import React from 'react';
 import Footer from '../../Components/Footer';
 import Logo from '../../../public/assets/logo.svg';
-
+import logo from '../../../public/assets/logo.png'
 import Gmail from '../../../public/assets/Icons/gmail.png';
 import Facebook from '../../../public/assets/Icons/facebook.png';
 import Sapatos from '../../../public/assets/Icons/sapatos.png';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
     <div>
-      <header className="flex justify-center lg:justify-start items-center p-2 bg-white shadow-md">
-        <img src={Logo} alt="Logo" className="w-6 md:w-8" />
+      <header className="flex justify-center lg:justify-start items-center gap-2 lg:pl-48  bg-white shadow-md">
+        <img src={logo} alt="Logo" className="w-6 md:w-8" />
         <h1 className="text-primary font-bold text-[18px] md:text-[24px]">
           {' '}
           Digital Store
@@ -23,9 +24,9 @@ export default function Login() {
               <h1 className="text-lg font-bold">Acesse sua conta</h1>
               <p className="text-sm">
                 Novo cliente? Então registre-se{' '}
-                <a href="#" className="text-black underline">
-                  aqui
-                </a>
+                <Link to={'/cadastro'} className='className="text-black underline'>
+                aqui
+                </Link>
                 .
               </p>
             </div>
