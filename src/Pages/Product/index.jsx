@@ -49,7 +49,7 @@ const Produto = () => {
     <div className="text-dark-gray-2 bg-light-gray-3">
       <Header />
       <div className="p-5">
-        <div className="pt-16 sm:pt-0 sm:px-[130px]">
+        <div className="pt-16 sm:pt-0 sm:px-10">
           <p className="text-[12px] mb-3 leading-5 sm:text-[14px] sm:mb-8">
             <strong>Home</strong> / Produtos / Tênis / {prodSelect.marca} /{' '}
             {prodSelect.nome}
